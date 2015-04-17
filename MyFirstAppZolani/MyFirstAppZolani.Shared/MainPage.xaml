@@ -1,0 +1,29 @@
+﻿<Page
+    x:Class="MyFirstAppZolani.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyFirstAppZolani"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Loaded="Page_Loaded">
+
+    <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,50,0,0">
+        <StackPanel Height="100">
+            <TextBlock TextWrapping="Wrap" Text="Digital Clock" Height="98" FontSize="72" FontWeight="Bold" TextAlignment="Center" LineHeight="5"/>
+        </StackPanel>
+        <StackPanel Height="196" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="305,0" Width="729">
+            <TextBlock x:Name="tbkHours" TextWrapping="Wrap" Width="131" Margin="0,0,15,0" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" Height="70"/>
+            <TextBlock x:Name="tbkColon1" TextWrapping="Wrap" Text=":" Width="60" Margin="0,0,15,0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="48" TextAlignment="Center" Height="70"/>
+            <TextBlock x:Name="tbkMinutes" TextWrapping="Wrap" Width="104.134" Margin="0,0,15,0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="48" Height="70" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <TextBlock.RenderTransform>
+                    <CompositeTransform SkewY="-1.286" TranslateY="-1.47"/>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+            <TextBlock TextWrapping="Wrap" Text=":" Width="60" Margin="0,0,15,0" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" Height="70"/>
+            <TextBlock x:Name="tbkSeconds" TextWrapping="Wrap" Width="131" Margin="0,0,15,0" TextAlignment="Center" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center" Height="70"/>
+        </StackPanel>
+        <Grid Height="182">
+            <Slider x:Name="SldSeconds" HorizontalAlignment="Left" Margin="113,23,0,0" VerticalAlignment="Top" Width="1100" Maximum="59"/>
+        </Grid>
+    </StackPanel>
+</Page>
